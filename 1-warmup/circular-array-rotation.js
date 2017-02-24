@@ -17,13 +17,20 @@ function main() {
     var q = parseInt(n_temp[2]); // number of queries
     a = readLine().split(' ');
     a = a.map(Number); // array to operate on
+
+    //////Rotate Array k times//////////
+    for (var i=0; i < k; i++) {
+    	var popped = a.pop()
+    	a.unshift(popped)
+    }
+    ////////////////
+
     for(var a0 = 0; a0 < q; a0++){
         var m = parseInt(readLine()); // index being queried against
+        //////////Find value at m /////////////
+        console.log(a[m])
     }
-    /////////////////////////////////
-
     
-
 }
 
 main()
